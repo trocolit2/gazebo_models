@@ -1,0 +1,54 @@
+<?xml version="1.0" ?>
+<sdf version="1.4">
+    <world name="camera_calibration">
+
+        <physics type="ode">
+            <max_step_size>0.01</max_step_size>
+            <real_time_factor>1</real_time_factor>
+            <real_time_update_rate>100</real_time_update_rate>
+        </physics>
+
+        <model name="nwu">
+            <static>true</static>
+            <link name="base" />
+            <link name="orientation" />
+            <joint name="__joint_orientation" type="fixed">
+                <child>orientation</child>
+                <parent>base</parent>
+            </joint>
+        </model>
+
+        <model name="surface">
+            <static>true</static>
+        </model>
+
+        <model name="usbl">
+            <static>true</static>
+        </model>
+
+        <include>
+            <uri>model://flat_fish</uri>
+            <pose>0 0 -20 0 0 -1.57</pose>
+        </include>
+
+        <include>
+            <uri>model://chessboard</uri>
+            <name>chessboard_down</name>
+            <pose>0 0 -30 0 0 0</pose>
+        </include>
+
+        <include>
+            <uri>model://chessboard</uri>
+            <name>chessboard_front</name>
+            <pose>0 -5 -20 0 1.57 1.57</pose>
+        </include>
+
+        <plugin name="underwater" filename="libgazebo_underwater.so">
+            <model_name>flat_fish</model_name>
+            <drag_coefficient>5 7.5 12.5</drag_coefficient>
+            <link_name>flat_fish_body</link_name>
+            <center_of_buoyancy>0 0 0.1</center_of_buoyancy>
+            <buoyancy>18</buoyancy>
+        </plugin>
+    </world>
+</sdf>

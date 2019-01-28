@@ -1,0 +1,64 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+    <!-- All scenes have a set of reference frames
+       The world reference frame (which must always be called 'underwater' is
+           the local reference frame for this environment
+       The 'nwu' model represents the inertial reference frame aligned NWU,
+           which might be rotated w.r.t.  the world
+       The 'nwu::orientation' frame is the frame that should be used to inertial-relative
+           orientations - this is a workaround for the transformer believeing that all frames
+           are full poses
+       The 'usbl' model represents the USBL base, i.e. the reference for USBL positioning
+    -->
+    <world name="aratu">
+        <physics type="ode">
+            <max_step_size>0.01</max_step_size>
+            <real_time_factor>1</real_time_factor>
+            <real_time_update_rate>100</real_time_update_rate>
+        </physics>
+
+        <!-- Aratu --> 
+        <spherical_coordinates>
+            <latitude_deg>-12.7977</latitude_deg>
+            <longitude_deg>-38.4555</longitude_deg>
+        </spherical_coordinates>
+
+        <model name="nwu">
+            <static>true</static>
+            <link name="base" />
+            <link name="orientation" />
+            <joint name="__joint_orientation" type="fixed">
+                <child>orientation</child>
+                <parent>base</parent>
+            </joint>
+        </model>
+
+        <model name="surface">
+            <static>true</static>
+        </model>
+
+        <model name="usbl">
+            <static>true</static>
+        </model>
+
+        <!-- Point in front of the pillars, easy to see from sonar
+             See log from 18/04/2017 -->
+        <model name="shell_submerged_hovering">
+            <pose>241 -132 0 0 0 -2.2515</pose>
+            <static>true</static>
+        </model>
+
+        <include>
+            <uri>model://flat_fish</uri>
+            <pose>0 0 -0.5 0 0 0</pose>
+        </include>
+
+        <plugin name="underwater" filename="libgazebo_underwater.so">
+            <model_name>flat_fish</model_name>
+            <link_name>flat_fish_body</link_name>
+            <drag_coefficient>5 7.5 12.5</drag_coefficient>
+            <center_of_buoyancy>0 0 0.1</center_of_buoyancy>
+            <buoyancy>18</buoyancy>
+        </plugin>
+    </world>
+</sdf>

@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<sdf version="1.4">
+	<model name="simple_manifold">
+		<static>true</static>
+		<link name="terrain">
+            <visual name="visual">
+                <geometry>
+                    <mesh>
+                        <uri>model://simple_manifold/terrain.stl</uri>
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.7 0.7 0.7 1</ambient>
+                    <diffuse>0.7 0.7 0.7 1</diffuse>
+                    <specular>0 0 0 0</specular>
+                </material>
+            </visual>
+            <collision name="collision">
+                <geometry>
+                    <mesh>
+                        <uri>model://simple_manifold/terrain.stl</uri>
+                    </mesh>
+                </geometry>
+            </collision>
+		</link>
+        <link name="manifold">
+            <pose>35 -10 -15 0 0 0.7854</pose>
+            <visual name="visual">
+                <geometry>
+                    <mesh>
+                        <uri>model://simple_manifold/manifold.stl</uri>
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.8 0.8 0 1</ambient>
+                    <diffuse>0.9 0.9 0 1</diffuse>
+                    <specular>0 0 0 0</specular>
+                </material>
+            </visual>
+            <collision name="collision">
+                <geometry>
+                    <mesh>
+                        <uri>model://simple_manifold/manifold.stl</uri>
+                    </mesh>
+                </geometry>
+            </collision>
+        </link>
+	</model>
+</sdf>

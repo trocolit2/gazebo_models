@@ -1,0 +1,78 @@
+<?xml version="1.0" ?>
+<sdf version="1.4">
+    <world name="flat_fish">
+
+        <physics type="ode">
+            <max_step_size>0.01</max_step_size>
+            <real_time_factor>1</real_time_factor>
+            <real_time_update_rate>100</real_time_update_rate>
+        </physics>
+
+        <model name="nwu">
+            <static>true</static>
+            <link name="base" />
+            <link name="orientation" />
+            <joint name="__joint_orientation" type="fixed">
+                <child>orientation</child>
+                <parent>base</parent>
+            </joint>
+        </model>
+
+        <model name="surface">
+            <static>true</static>
+        </model>
+
+        <model name="usbl">
+            <static>true</static>
+        </model>
+
+
+        <include>
+            <uri>model://mega_structure</uri>
+            <pose>0 0 0 0 0 0</pose>
+        </include>
+
+        <include>
+            <uri>model://simple_manifold</uri>
+            <pose>0 0 -20 0 0 0</pose>
+        </include>
+
+        <include>
+            <uri>model://flat_fish</uri>
+            <pose>0 0 -0.5 0 0 0</pose>
+        </include>
+
+        <include>
+            <uri>model://apriltag_20</uri>
+            <pose>4.9 -0.2 -1.5 0 -1.57 0</pose>
+        </include>
+
+        <include>
+            <uri>model://apriltag_19</uri>
+            <pose>4.9 0.8 -1.5 1.57 0 -1.57</pose>
+        </include>
+
+        <include>
+            <uri>model://apriltag_18</uri>
+            <pose>4.9 -0.5 -1.15 0 1.57 3.1415</pose>
+        </include>
+
+        <include>
+            <uri>model://apriltag_17</uri>
+            <pose>4.9 -1.5 -1.15 -1.57 0 1.57</pose>
+        </include>
+
+        <include>
+            <uri>model://reflector</uri>
+            <pose>10 0 -5 0 -1.57 0</pose>
+        </include>
+
+        <plugin name="underwater" filename="libgazebo_underwater.so">
+            <model_name>flat_fish</model_name>
+            <drag_coefficient>5 7.5 12.5</drag_coefficient>
+            <link_name>flat_fish_body</link_name>
+            <center_of_buoyancy>0 0 0.1</center_of_buoyancy>
+            <buoyancy>18</buoyancy>
+        </plugin>
+    </world>
+</sdf>

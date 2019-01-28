@@ -1,0 +1,949 @@
+<sdf version="1.4">
+  <model name='chessboard'>
+  <static>true</static>
+  <pose>0 0 0 0 0 0</pose>
+
+    <!-- Auxiliary white background -->
+     <link name='chessboard_back_plane'>
+       <visual name='block0'>
+         <pose>0 0 -0.05 0 0 0</pose>
+           <geometry>
+             <box>
+               <size>10 10 0.05</size>
+             </box>
+           </geometry>
+         <material>
+           <ambient>1 1 1 1</ambient>
+           <diffuse>1 1 1 1</diffuse>
+           <specular>1 1 1 1</specular>
+         </material>
+       </visual>
+     </link>
+
+     <link name='chessboard_body'>
+      <visual name='block0'>
+        <pose>0 0 0.001 0 0 0</pose>
+          <geometry>
+            <box>
+            <size>0.035 0.035 0.003</size>
+            </box>
+          </geometry>
+        <material>
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0 0 0 1</diffuse>
+          <specular>0 0 0 1</specular>
+        </material>
+      </visual>
+      <visual name='block1'>
+        <pose>0 0.035 0.001 0 0 0</pose>
+          <geometry>
+            <box>
+            <size>0.035 0.035 0.003</size>
+            </box>
+          </geometry>
+        <material>
+          <ambient>1 1 1 1</ambient>
+          <diffuse>1 1 1 1</diffuse>
+          <specular>1 1 1 1</specular>
+        </material>
+      </visual>
+      <visual name='block2'>
+        <pose>0 0.07 0.001 0 0 0</pose>
+          <geometry>
+            <box>
+            <size>0.035 0.035 0.003</size>
+            </box>
+          </geometry>
+        <material>
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0 0 0 1</diffuse>
+          <specular>0 0 0 1</specular>
+        </material>
+      </visual>
+      <visual name='block3'>
+        <pose>0 0.105 0.001 0 0 0</pose>
+          <geometry>
+            <box>
+            <size>0.035 0.035 0.003</size>
+            </box>
+          </geometry>
+        <material>
+          <ambient>1 1 1 1</ambient>
+          <diffuse>1 1 1 1</diffuse>
+          <specular>1 1 1 1</specular>
+        </material>
+      </visual>
+      <visual name='block4'>
+        <pose>0 0.14 0.001 0 0 0</pose>
+          <geometry>
+            <box>
+            <size>0.035 0.035 0.003</size>
+            </box>
+          </geometry>
+        <material>
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0 0 0 1</diffuse>
+          <specular>0 0 0 1</specular>
+        </material>
+      </visual>
+      <visual name='block5'>
+        <pose>0 0.175 0.001 0 0 0</pose>
+          <geometry>
+            <box>
+            <size>0.035 0.035 0.003</size>
+            </box>
+          </geometry>
+        <material>
+          <ambient>1 1 1 1</ambient>
+          <diffuse>1 1 1 1</diffuse>
+          <specular>1 1 1 1</specular>
+        </material>
+      </visual>
+      <visual name='block6'>
+        <pose>0 0.21 0.001 0 0 0</pose>
+          <geometry>
+            <box>
+            <size>0.035 0.035 0.003</size>
+            </box>
+          </geometry>
+        <material>
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0 0 0 1</diffuse>
+          <specular>0 0 0 1</specular>
+        </material>
+      </visual>
+      <visual name='block7'>
+        <pose>0 0.245 0.001 0 0 0</pose>
+          <geometry>
+            <box>
+            <size>0.035 0.035 0.003</size>
+            </box>
+          </geometry>
+        <material>
+          <ambient>1 1 1 1</ambient>
+          <diffuse>1 1 1 1</diffuse>
+          <specular>1 1 1 1</specular>
+        </material>
+      </visual>
+      <visual name='block8'>
+        <pose>0 0.28 0.001 0 0 0</pose>
+          <geometry>
+            <box>
+            <size>0.035 0.035 0.003</size>
+            </box>
+          </geometry>
+        <material>
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0 0 0 1</diffuse>
+          <specular>0 0 0 1</specular>
+        </material>
+      </visual>
+      <visual name='block9'>
+        <pose>0 0.315 0.001 0 0 0</pose>
+          <geometry>
+            <box>
+            <size>0.035 0.035 0.003</size>
+            </box>
+          </geometry>
+        <material>
+          <ambient>1 1 1 1</ambient>
+          <diffuse>1 1 1 1</diffuse>
+          <specular>1 1 1 1</specular>
+        </material>
+      </visual>
+      <visual name='block7'>
+        <pose>0.035 0 0.001 0 0 0</pose>
+          <geometry>
+            <box>
+            <size>0.035 0.035 0.003</size>
+            </box>
+          </geometry>
+        <material>
+          <ambient>1 1 1 1</ambient>
+          <diffuse>1 1 1 1</diffuse>
+          <specular>1 1 1 1</specular>
+        </material>
+      </visual>
+      <visual name='block8'>
+        <pose>0.035 0.035 0.001 0 0 0</pose>
+          <geometry>
+            <box>
+            <size>0.035 0.035 0.003</size>
+            </box>
+          </geometry>
+        <material>
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0 0 0 1</diffuse>
+          <specular>0 0 0 1</specular>
+        </material>
+      </visual>
+      <visual name='block9'>
+        <pose>0.035 0.07 0.001 0 0 0</pose>
+          <geometry>
+            <box>
+            <size>0.035 0.035 0.003</size>
+            </box>
+          </geometry>
+        <material>
+          <ambient>1 1 1 1</ambient>
+          <diffuse>1 1 1 1</diffuse>
+          <specular>1 1 1 1</specular>
+        </material>
+      </visual>
+      <visual name='block10'>
+        <pose>0.035 0.105 0.001 0 0 0</pose>
+          <geometry>
+            <box>
+            <size>0.035 0.035 0.003</size>
+            </box>
+          </geometry>
+        <material>
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0 0 0 1</diffuse>
+          <specular>0 0 0 1</specular>
+        </material>
+      </visual>
+      <visual name='block11'>
+        <pose>0.035 0.14 0.001 0 0 0</pose>
+          <geometry>
+            <box>
+            <size>0.035 0.035 0.003</size>
+            </box>
+          </geometry>
+        <material>
+          <ambient>1 1 1 1</ambient>
+          <diffuse>1 1 1 1</diffuse>
+          <specular>1 1 1 1</specular>
+        </material>
+      </visual>
+      <visual name='block12'>
+        <pose>0.035 0.175 0.001 0 0 0</pose>
+          <geometry>
+            <box>
+            <size>0.035 0.035 0.003</size>
+            </box>
+          </geometry>
+        <material>
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0 0 0 1</diffuse>
+          <specular>0 0 0 1</specular>
+        </material>
+      </visual>
+      <visual name='block13'>
+        <pose>0.035 0.21 0.001 0 0 0</pose>
+          <geometry>
+            <box>
+            <size>0.035 0.035 0.003</size>
+            </box>
+          </geometry>
+        <material>
+          <ambient>1 1 1 1</ambient>
+          <diffuse>1 1 1 1</diffuse>
+          <specular>1 1 1 1</specular>
+        </material>
+      </visual>
+      <visual name='block14'>
+        <pose>0.035 0.245 0.001 0 0 0</pose>
+          <geometry>
+            <box>
+            <size>0.035 0.035 0.003</size>
+            </box>
+          </geometry>
+        <material>
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0 0 0 1</diffuse>
+          <specular>0 0 0 1</specular>
+        </material>
+      </visual>
+      <visual name='block15'>
+        <pose>0.035 0.28 0.001 0 0 0</pose>
+          <geometry>
+            <box>
+            <size>0.035 0.035 0.003</size>
+            </box>
+          </geometry>
+        <material>
+          <ambient>1 1 1 1</ambient>
+          <diffuse>1 1 1 1</diffuse>
+          <specular>1 1 1 1</specular>
+        </material>
+      </visual>
+      <visual name='block16'>
+        <pose>0.035 0.315 0.001 0 0 0</pose>
+          <geometry>
+            <box>
+            <size>0.035 0.035 0.003</size>
+            </box>
+          </geometry>
+        <material>
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0 0 0 1</diffuse>
+          <specular>0 0 0 1</specular>
+        </material>
+      </visual>
+      <visual name='block14'>
+        <pose>0.07 0 0.001 0 0 0</pose>
+          <geometry>
+            <box>
+            <size>0.035 0.035 0.003</size>
+            </box>
+          </geometry>
+        <material>
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0 0 0 1</diffuse>
+          <specular>0 0 0 1</specular>
+        </material>
+      </visual>
+      <visual name='block15'>
+        <pose>0.07 0.035 0.001 0 0 0</pose>
+          <geometry>
+            <box>
+            <size>0.035 0.035 0.003</size>
+            </box>
+          </geometry>
+        <material>
+          <ambient>1 1 1 1</ambient>
+          <diffuse>1 1 1 1</diffuse>
+          <specular>1 1 1 1</specular>
+        </material>
+      </visual>
+      <visual name='block16'>
+        <pose>0.07 0.07 0.001 0 0 0</pose>
+          <geometry>
+            <box>
+            <size>0.035 0.035 0.003</size>
+            </box>
+          </geometry>
+        <material>
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0 0 0 1</diffuse>
+          <specular>0 0 0 1</specular>
+        </material>
+      </visual>
+      <visual name='block17'>
+        <pose>0.07 0.105 0.001 0 0 0</pose>
+          <geometry>
+            <box>
+            <size>0.035 0.035 0.003</size>
+            </box>
+          </geometry>
+        <material>
+          <ambient>1 1 1 1</ambient>
+          <diffuse>1 1 1 1</diffuse>
+          <specular>1 1 1 1</specular>
+        </material>
+      </visual>
+      <visual name='block18'>
+        <pose>0.07 0.14 0.001 0 0 0</pose>
+          <geometry>
+            <box>
+            <size>0.035 0.035 0.003</size>
+            </box>
+          </geometry>
+        <material>
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0 0 0 1</diffuse>
+          <specular>0 0 0 1</specular>
+        </material>
+      </visual>
+      <visual name='block19'>
+        <pose>0.07 0.175 0.001 0 0 0</pose>
+          <geometry>
+            <box>
+            <size>0.035 0.035 0.003</size>
+            </box>
+          </geometry>
+        <material>
+          <ambient>1 1 1 1</ambient>
+          <diffuse>1 1 1 1</diffuse>
+          <specular>1 1 1 1</specular>
+        </material>
+      </visual>
+      <visual name='block20'>
+        <pose>0.07 0.21 0.001 0 0 0</pose>
+          <geometry>
+            <box>
+            <size>0.035 0.035 0.003</size>
+            </box>
+          </geometry>
+        <material>
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0 0 0 1</diffuse>
+          <specular>0 0 0 1</specular>
+        </material>
+      </visual>
+      <visual name='block21'>
+        <pose>0.07 0.245 0.001 0 0 0</pose>
+          <geometry>
+            <box>
+            <size>0.035 0.035 0.003</size>
+            </box>
+          </geometry>
+        <material>
+          <ambient>1 1 1 1</ambient>
+          <diffuse>1 1 1 1</diffuse>
+          <specular>1 1 1 1</specular>
+        </material>
+      </visual>
+      <visual name='block22'>
+        <pose>0.07 0.28 0.001 0 0 0</pose>
+          <geometry>
+            <box>
+            <size>0.035 0.035 0.003</size>
+            </box>
+          </geometry>
+        <material>
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0 0 0 1</diffuse>
+          <specular>0 0 0 1</specular>
+        </material>
+      </visual>
+      <visual name='block23'>
+        <pose>0.07 0.315 0.001 0 0 0</pose>
+          <geometry>
+            <box>
+            <size>0.035 0.035 0.003</size>
+            </box>
+          </geometry>
+        <material>
+          <ambient>1 1 1 1</ambient>
+          <diffuse>1 1 1 1</diffuse>
+          <specular>1 1 1 1</specular>
+        </material>
+      </visual>
+      <visual name='block21'>
+        <pose>0.105 0 0.001 0 0 0</pose>
+          <geometry>
+            <box>
+            <size>0.035 0.035 0.003</size>
+            </box>
+          </geometry>
+        <material>
+          <ambient>1 1 1 1</ambient>
+          <diffuse>1 1 1 1</diffuse>
+          <specular>1 1 1 1</specular>
+        </material>
+      </visual>
+      <visual name='block22'>
+        <pose>0.105 0.035 0.001 0 0 0</pose>
+          <geometry>
+            <box>
+            <size>0.035 0.035 0.003</size>
+            </box>
+          </geometry>
+        <material>
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0 0 0 1</diffuse>
+          <specular>0 0 0 1</specular>
+        </material>
+      </visual>
+      <visual name='block23'>
+        <pose>0.105 0.07 0.001 0 0 0</pose>
+          <geometry>
+            <box>
+            <size>0.035 0.035 0.003</size>
+            </box>
+          </geometry>
+        <material>
+          <ambient>1 1 1 1</ambient>
+          <diffuse>1 1 1 1</diffuse>
+          <specular>1 1 1 1</specular>
+        </material>
+      </visual>
+      <visual name='block24'>
+        <pose>0.105 0.105 0.001 0 0 0</pose>
+          <geometry>
+            <box>
+            <size>0.035 0.035 0.003</size>
+            </box>
+          </geometry>
+        <material>
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0 0 0 1</diffuse>
+          <specular>0 0 0 1</specular>
+        </material>
+      </visual>
+      <visual name='block25'>
+        <pose>0.105 0.14 0.001 0 0 0</pose>
+          <geometry>
+            <box>
+            <size>0.035 0.035 0.003</size>
+            </box>
+          </geometry>
+        <material>
+          <ambient>1 1 1 1</ambient>
+          <diffuse>1 1 1 1</diffuse>
+          <specular>1 1 1 1</specular>
+        </material>
+      </visual>
+      <visual name='block26'>
+        <pose>0.105 0.175 0.001 0 0 0</pose>
+          <geometry>
+            <box>
+            <size>0.035 0.035 0.003</size>
+            </box>
+          </geometry>
+        <material>
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0 0 0 1</diffuse>
+          <specular>0 0 0 1</specular>
+        </material>
+      </visual>
+      <visual name='block27'>
+        <pose>0.105 0.21 0.001 0 0 0</pose>
+          <geometry>
+            <box>
+            <size>0.035 0.035 0.003</size>
+            </box>
+          </geometry>
+        <material>
+          <ambient>1 1 1 1</ambient>
+          <diffuse>1 1 1 1</diffuse>
+          <specular>1 1 1 1</specular>
+        </material>
+      </visual>
+      <visual name='block28'>
+        <pose>0.105 0.245 0.001 0 0 0</pose>
+          <geometry>
+            <box>
+            <size>0.035 0.035 0.003</size>
+            </box>
+          </geometry>
+        <material>
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0 0 0 1</diffuse>
+          <specular>0 0 0 1</specular>
+        </material>
+      </visual>
+      <visual name='block29'>
+        <pose>0.105 0.28 0.001 0 0 0</pose>
+          <geometry>
+            <box>
+            <size>0.035 0.035 0.003</size>
+            </box>
+          </geometry>
+        <material>
+          <ambient>1 1 1 1</ambient>
+          <diffuse>1 1 1 1</diffuse>
+          <specular>1 1 1 1</specular>
+        </material>
+      </visual>
+      <visual name='block30'>
+        <pose>0.105 0.315 0.001 0 0 0</pose>
+          <geometry>
+            <box>
+            <size>0.035 0.035 0.003</size>
+            </box>
+          </geometry>
+        <material>
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0 0 0 1</diffuse>
+          <specular>0 0 0 1</specular>
+        </material>
+      </visual>
+      <visual name='block28'>
+        <pose>0.14 0 0.001 0 0 0</pose>
+          <geometry>
+            <box>
+            <size>0.035 0.035 0.003</size>
+            </box>
+          </geometry>
+        <material>
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0 0 0 1</diffuse>
+          <specular>0 0 0 1</specular>
+        </material>
+      </visual>
+      <visual name='block29'>
+        <pose>0.14 0.035 0.001 0 0 0</pose>
+          <geometry>
+            <box>
+            <size>0.035 0.035 0.003</size>
+            </box>
+          </geometry>
+        <material>
+          <ambient>1 1 1 1</ambient>
+          <diffuse>1 1 1 1</diffuse>
+          <specular>1 1 1 1</specular>
+        </material>
+      </visual>
+      <visual name='block30'>
+        <pose>0.14 0.07 0.001 0 0 0</pose>
+          <geometry>
+            <box>
+            <size>0.035 0.035 0.003</size>
+            </box>
+          </geometry>
+        <material>
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0 0 0 1</diffuse>
+          <specular>0 0 0 1</specular>
+        </material>
+      </visual>
+      <visual name='block31'>
+        <pose>0.14 0.105 0.001 0 0 0</pose>
+          <geometry>
+            <box>
+            <size>0.035 0.035 0.003</size>
+            </box>
+          </geometry>
+        <material>
+          <ambient>1 1 1 1</ambient>
+          <diffuse>1 1 1 1</diffuse>
+          <specular>1 1 1 1</specular>
+        </material>
+      </visual>
+      <visual name='block32'>
+        <pose>0.14 0.14 0.001 0 0 0</pose>
+          <geometry>
+            <box>
+            <size>0.035 0.035 0.003</size>
+            </box>
+          </geometry>
+        <material>
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0 0 0 1</diffuse>
+          <specular>0 0 0 1</specular>
+        </material>
+      </visual>
+      <visual name='block33'>
+        <pose>0.14 0.175 0.001 0 0 0</pose>
+          <geometry>
+            <box>
+            <size>0.035 0.035 0.003</size>
+            </box>
+          </geometry>
+        <material>
+          <ambient>1 1 1 1</ambient>
+          <diffuse>1 1 1 1</diffuse>
+          <specular>1 1 1 1</specular>
+        </material>
+      </visual>
+      <visual name='block34'>
+        <pose>0.14 0.21 0.001 0 0 0</pose>
+          <geometry>
+            <box>
+            <size>0.035 0.035 0.003</size>
+            </box>
+          </geometry>
+        <material>
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0 0 0 1</diffuse>
+          <specular>0 0 0 1</specular>
+        </material>
+      </visual>
+      <visual name='block35'>
+        <pose>0.14 0.245 0.001 0 0 0</pose>
+          <geometry>
+            <box>
+            <size>0.035 0.035 0.003</size>
+            </box>
+          </geometry>
+        <material>
+          <ambient>1 1 1 1</ambient>
+          <diffuse>1 1 1 1</diffuse>
+          <specular>1 1 1 1</specular>
+        </material>
+      </visual>
+      <visual name='block36'>
+        <pose>0.14 0.28 0.001 0 0 0</pose>
+          <geometry>
+            <box>
+            <size>0.035 0.035 0.003</size>
+            </box>
+          </geometry>
+        <material>
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0 0 0 1</diffuse>
+          <specular>0 0 0 1</specular>
+        </material>
+      </visual>
+      <visual name='block37'>
+        <pose>0.14 0.315 0.001 0 0 0</pose>
+          <geometry>
+            <box>
+            <size>0.035 0.035 0.003</size>
+            </box>
+          </geometry>
+        <material>
+          <ambient>1 1 1 1</ambient>
+          <diffuse>1 1 1 1</diffuse>
+          <specular>1 1 1 1</specular>
+        </material>
+      </visual>
+      <visual name='block35'>
+        <pose>0.175 0 0.001 0 0 0</pose>
+          <geometry>
+            <box>
+            <size>0.035 0.035 0.003</size>
+            </box>
+          </geometry>
+        <material>
+          <ambient>1 1 1 1</ambient>
+          <diffuse>1 1 1 1</diffuse>
+          <specular>1 1 1 1</specular>
+        </material>
+      </visual>
+      <visual name='block36'>
+        <pose>0.175 0.035 0.001 0 0 0</pose>
+          <geometry>
+            <box>
+            <size>0.035 0.035 0.003</size>
+            </box>
+          </geometry>
+        <material>
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0 0 0 1</diffuse>
+          <specular>0 0 0 1</specular>
+        </material>
+      </visual>
+      <visual name='block37'>
+        <pose>0.175 0.07 0.001 0 0 0</pose>
+          <geometry>
+            <box>
+            <size>0.035 0.035 0.003</size>
+            </box>
+          </geometry>
+        <material>
+          <ambient>1 1 1 1</ambient>
+          <diffuse>1 1 1 1</diffuse>
+          <specular>1 1 1 1</specular>
+        </material>
+      </visual>
+      <visual name='block38'>
+        <pose>0.175 0.105 0.001 0 0 0</pose>
+          <geometry>
+            <box>
+            <size>0.035 0.035 0.003</size>
+            </box>
+          </geometry>
+        <material>
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0 0 0 1</diffuse>
+          <specular>0 0 0 1</specular>
+        </material>
+      </visual>
+      <visual name='block39'>
+        <pose>0.175 0.14 0.001 0 0 0</pose>
+          <geometry>
+            <box>
+            <size>0.035 0.035 0.003</size>
+            </box>
+          </geometry>
+        <material>
+          <ambient>1 1 1 1</ambient>
+          <diffuse>1 1 1 1</diffuse>
+          <specular>1 1 1 1</specular>
+        </material>
+      </visual>
+      <visual name='block40'>
+        <pose>0.175 0.175 0.001 0 0 0</pose>
+          <geometry>
+            <box>
+            <size>0.035 0.035 0.003</size>
+            </box>
+          </geometry>
+        <material>
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0 0 0 1</diffuse>
+          <specular>0 0 0 1</specular>
+        </material>
+      </visual>
+      <visual name='block41'>
+        <pose>0.175 0.21 0.001 0 0 0</pose>
+          <geometry>
+            <box>
+            <size>0.035 0.035 0.003</size>
+            </box>
+          </geometry>
+        <material>
+          <ambient>1 1 1 1</ambient>
+          <diffuse>1 1 1 1</diffuse>
+          <specular>1 1 1 1</specular>
+        </material>
+      </visual>
+      <visual name='block42'>
+        <pose>0.175 0.245 0.001 0 0 0</pose>
+          <geometry>
+            <box>
+            <size>0.035 0.035 0.003</size>
+            </box>
+          </geometry>
+        <material>
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0 0 0 1</diffuse>
+          <specular>0 0 0 1</specular>
+        </material>
+      </visual>
+      <visual name='block43'>
+        <pose>0.175 0.28 0.001 0 0 0</pose>
+          <geometry>
+            <box>
+            <size>0.035 0.035 0.003</size>
+            </box>
+          </geometry>
+        <material>
+          <ambient>1 1 1 1</ambient>
+          <diffuse>1 1 1 1</diffuse>
+          <specular>1 1 1 1</specular>
+        </material>
+      </visual>
+      <visual name='block44'>
+        <pose>0.175 0.315 0.001 0 0 0</pose>
+          <geometry>
+            <box>
+            <size>0.035 0.035 0.003</size>
+            </box>
+          </geometry>
+        <material>
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0 0 0 1</diffuse>
+          <specular>0 0 0 1</specular>
+        </material>
+      </visual>
+      <visual name='block42'>
+        <pose>0.21 0 0.001 0 0 0</pose>
+          <geometry>
+            <box>
+            <size>0.035 0.035 0.003</size>
+            </box>
+          </geometry>
+        <material>
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0 0 0 1</diffuse>
+          <specular>0 0 0 1</specular>
+        </material>
+      </visual>
+      <visual name='block43'>
+        <pose>0.21 0.035 0.001 0 0 0</pose>
+          <geometry>
+            <box>
+            <size>0.035 0.035 0.003</size>
+            </box>
+          </geometry>
+        <material>
+          <ambient>1 1 1 1</ambient>
+          <diffuse>1 1 1 1</diffuse>
+          <specular>1 1 1 1</specular>
+        </material>
+      </visual>
+      <visual name='block44'>
+        <pose>0.21 0.07 0.001 0 0 0</pose>
+          <geometry>
+            <box>
+            <size>0.035 0.035 0.003</size>
+            </box>
+          </geometry>
+        <material>
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0 0 0 1</diffuse>
+          <specular>0 0 0 1</specular>
+        </material>
+      </visual>
+      <visual name='block45'>
+        <pose>0.21 0.105 0.001 0 0 0</pose>
+          <geometry>
+            <box>
+            <size>0.035 0.035 0.003</size>
+            </box>
+          </geometry>
+        <material>
+          <ambient>1 1 1 1</ambient>
+          <diffuse>1 1 1 1</diffuse>
+          <specular>1 1 1 1</specular>
+        </material>
+      </visual>
+      <visual name='block46'>
+        <pose>0.21 0.14 0.001 0 0 0</pose>
+          <geometry>
+            <box>
+            <size>0.035 0.035 0.003</size>
+            </box>
+          </geometry>
+        <material>
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0 0 0 1</diffuse>
+          <specular>0 0 0 1</specular>
+        </material>
+      </visual>
+      <visual name='block47'>
+        <pose>0.21 0.175 0.001 0 0 0</pose>
+          <geometry>
+            <box>
+            <size>0.035 0.035 0.003</size>
+            </box>
+          </geometry>
+        <material>
+          <ambient>1 1 1 1</ambient>
+          <diffuse>1 1 1 1</diffuse>
+          <specular>1 1 1 1</specular>
+        </material>
+      </visual>
+      <visual name='block48'>
+        <pose>0.21 0.21 0.001 0 0 0</pose>
+          <geometry>
+            <box>
+            <size>0.035 0.035 0.003</size>
+            </box>
+          </geometry>
+        <material>
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0 0 0 1</diffuse>
+          <specular>0 0 0 1</specular>
+        </material>
+      </visual>
+      <visual name='block49'>
+        <pose>0.21 0.245 0.001 0 0 0</pose>
+          <geometry>
+            <box>
+            <size>0.035 0.035 0.003</size>
+            </box>
+          </geometry>
+        <material>
+          <ambient>1 1 1 1</ambient>
+          <diffuse>1 1 1 1</diffuse>
+          <specular>1 1 1 1</specular>
+        </material>
+      </visual>
+      <visual name='block50'>
+        <pose>0.21 0.28 0.001 0 0 0</pose>
+          <geometry>
+            <box>
+            <size>0.035 0.035 0.003</size>
+            </box>
+          </geometry>
+        <material>
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0 0 0 1</diffuse>
+          <specular>0 0 0 1</specular>
+        </material>
+      </visual>
+      <visual name='block51'>
+        <pose>0.21 0.315 0.001 0 0 0</pose>
+          <geometry>
+            <box>
+            <size>0.035 0.035 0.003</size>
+            </box>
+          </geometry>
+        <material>
+          <ambient>1 1 1 1</ambient>
+          <diffuse>1 1 1 1</diffuse>
+          <specular>1 1 1 1</specular>
+        </material>
+      </visual>
+      <visual name='thin_layer'>
+        <pose>0.105 0.105 0 0 0 0</pose>
+          <geometry>
+            <box>
+            <size>0.245 0.245 0.001</size>
+            </box>
+          </geometry>
+        <material>
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0 0 0 1</diffuse>
+          <specular>0 0 0 1</specular>
+        </material>
+      </visual>
+    </link>
+  </model>
+</sdf>

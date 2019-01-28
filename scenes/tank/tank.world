@@ -1,0 +1,88 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+    <world name="tank">
+        <model name="nwu">
+            <static>true</static>
+            <link name="base" />
+            <link name="orientation" />
+            <joint name="__joint_orientation" type="fixed">
+                <child>orientation</child>
+                <parent>base</parent>
+            </joint>
+        </model>
+
+        <spherical_coordinates>
+            <latitude_deg>53.1119</latitude_deg>
+            <longitude_deg>8.8584</longitude_deg>
+            <heading_deg>90</heading_deg><!-- Rock is NWU, SDF is ENU by default -->
+        </spherical_coordinates>
+
+        <model name="surface">
+            <static>true</static>
+        </model>
+
+        <model name="usbl">
+            <static>true</static>
+        </model>
+
+        <include>
+            <uri>model://flat_fish</uri>
+            <pose>16.80 16.60 -7.30 0 0 1.57</pose>
+        </include>
+
+        <include>
+            <name>tank_structure</name>
+            <uri>model://tank</uri>
+        </include>
+
+        <include>
+            <uri>model://docking_station</uri>
+            <pose>16.80 17.52 -8 0 0 0</pose>
+        </include>
+
+	      <include>
+            <uri>model://ssiv_mockup_de</uri>
+            <pose>9.10 10.00 -8 0 0 -1.763</pose>
+        </include>
+
+        <include>
+            <uri>model://dat</uri>
+            <pose>21.3 7 -8 0 0 -1.57</pose>
+        </include>
+
+        <include>
+            <uri>model://apriltag_20</uri>
+            <pose>16.825 15.65 -7.75 0 -0.9 1.57</pose>
+        </include>
+
+        <include>
+            <uri>model://apriltag_13</uri>
+            <pose>16.825 18.65 -7.3 0 -1.57 1.57</pose>
+        </include>
+
+        <include>
+            <uri>model://apriltag_8</uri>
+            <pose>17.05 18.1 -7.4 0 -1.57 1.57</pose>
+        </include>
+
+        <include>
+            <uri>model://apriltag_6</uri>
+            <pose>17.05 17.7 -7.83 0 0 1.57</pose>
+        </include>
+
+        <physics type="ode">
+            <max_step_size>0.01</max_step_size>
+            <real_time_factor>1</real_time_factor>
+            <real_time_update_rate>100</real_time_update_rate>
+        </physics>
+
+        <plugin name="underwater" filename="libgazebo_underwater.so">
+            <model_name>flat_fish</model_name>
+            <link_name>flat_fish_body</link_name>
+            <drag_coefficient>5 7.5 12.5</drag_coefficient>
+            <center_of_buoyancy>0 0 0.1</center_of_buoyancy>
+            <buoyancy>18</buoyancy>
+        </plugin>
+
+    </world>
+</sdf>

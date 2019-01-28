@@ -1,0 +1,432 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+    <world name="ssiv_mockup">
+        <model name="nwu">
+            <static>true</static>
+            <link name="base" />
+            <link name="orientation" />
+            <joint name="__joint_orientation" type="fixed">
+                <child>orientation</child>
+                <parent>base</parent>
+            </joint>
+        </model>
+
+        <model name="surface">
+            <static>true</static>
+        </model>
+
+        <model name="usbl">
+            <static>true</static>
+        </model>
+
+        <include>
+            <uri>model://flat_fish</uri>
+            <pose>0 0 0 0 0 0</pose>
+        </include>
+
+        <include>
+            <uri>model://ssiv_mockup_de</uri>
+            <pose>0 0 -40 0 0 0</pose>
+        </include>
+
+        <physics type="ode">
+            <max_step_size>0.01</max_step_size>
+            <real_time_factor>1</real_time_factor>
+            <real_time_update_rate>100</real_time_update_rate>
+        </physics>
+
+        <plugin name="underwater" filename="libgazebo_underwater.so">
+            <model_name>flat_fish</model_name>
+            <link_name>flat_fish_body</link_name>
+            <drag_coefficient>5 7.5 12.5</drag_coefficient>
+            <center_of_buoyancy>0 0 0.1</center_of_buoyancy>
+            <buoyancy>18</buoyancy>
+        </plugin>
+
+        <!-- AUTOMATICALLY GENERATED UNDERWATER ENVIRONMENT -->
+
+        <!-- seafloor -->
+         <include>
+             <uri>model://seafloor</uri>
+             <name>seafloor</name>
+             <pose>0 0 -40 0 0 0</pose>
+         </include>
+
+        <!-- set of plants -->
+         <include>
+             <uri>model://subsea_plant_4</uri>
+             <name>subsea_plant_4_19.18_-99.64</name>
+             <pose>19.18 -99.64 -40 0 0 5.99</pose>
+         </include>
+         <include>
+             <uri>model://subsea_plant_3</uri>
+             <name>subsea_plant_3_20.44_-97.85</name>
+             <pose>20.44 -97.85 -40 0 0 1.14</pose>
+         </include>
+         <include>
+             <uri>model://subsea_plant_4</uri>
+             <name>subsea_plant_4_-7.89_-59.45</name>
+             <pose>-7.89 -59.45 -40 0 0 5.3</pose>
+         </include>
+         <include>
+             <uri>model://subsea_plant_3</uri>
+             <name>subsea_plant_3_-8.67_-60.14</name>
+             <pose>-8.67 -60.14 -40 0 0 4.82</pose>
+         </include>
+         <include>
+             <uri>model://subsea_plant_3</uri>
+             <name>subsea_plant_3_-8.50_-59.15</name>
+             <pose>-8.50 -59.15 -40 0 0 2.71</pose>
+         </include>
+         <include>
+             <uri>model://subsea_plant_4</uri>
+             <name>subsea_plant_4_-6.13_-59.71</name>
+             <pose>-6.13 -59.71 -40 0 0 2.17</pose>
+         </include>
+         <include>
+             <uri>model://subsea_plant_1</uri>
+             <name>subsea_plant_1_-64.27_-85.71</name>
+             <pose>-64.27 -85.71 -40 0 0 5.26</pose>
+         </include>
+         <include>
+             <uri>model://subsea_plant_2</uri>
+             <name>subsea_plant_2_-65.31_-84.83</name>
+             <pose>-65.31 -84.83 -40 0 0 4.46</pose>
+         </include>
+         <include>
+             <uri>model://subsea_plant_4</uri>
+             <name>subsea_plant_4_-63.24_-84.0</name>
+             <pose>-63.24 -84.0 -40 0 0 4.78</pose>
+         </include>
+         <include>
+             <uri>model://subsea_plant_2</uri>
+             <name>subsea_plant_2_65.28_-74.94</name>
+             <pose>65.28 -74.94 -40 0 0 4.4</pose>
+         </include>
+         <include>
+             <uri>model://subsea_plant_4</uri>
+             <name>subsea_plant_4_66.46_-75.49</name>
+             <pose>66.46 -75.49 -40 0 0 1.5</pose>
+         </include>
+         <include>
+             <uri>model://subsea_plant_1</uri>
+             <name>subsea_plant_1_65.44_-76.30</name>
+             <pose>65.44 -76.30 -40 0 0 4.27</pose>
+         </include>
+         <include>
+             <uri>model://subsea_plant_1</uri>
+             <name>subsea_plant_1_75.1_-49.23</name>
+             <pose>75.1 -49.23 -40 0 0 3.69</pose>
+         </include>
+         <include>
+             <uri>model://subsea_plant_4</uri>
+             <name>subsea_plant_4_75.56_-48.25</name>
+             <pose>75.56 -48.25 -40 0 0 2.11</pose>
+         </include>
+         <include>
+             <uri>model://subsea_plant_3</uri>
+             <name>subsea_plant_3_73.88_-48.88</name>
+             <pose>73.88 -48.88 -40 0 0 2.28</pose>
+         </include>
+         <include>
+             <uri>model://subsea_plant_1</uri>
+             <name>subsea_plant_1_-89.97_-86.69</name>
+             <pose>-89.97 -86.69 -40 0 0 4.70</pose>
+         </include>
+         <include>
+             <uri>model://subsea_plant_1</uri>
+             <name>subsea_plant_1_-88.73_-87.81</name>
+             <pose>-88.73 -87.81 -40 0 0 3.17</pose>
+         </include>
+         <include>
+             <uri>model://subsea_plant_2</uri>
+             <name>subsea_plant_2_-89.22_-87.51</name>
+             <pose>-89.22 -87.51 -40 0 0 2.87</pose>
+         </include>
+         <include>
+             <uri>model://subsea_plant_4</uri>
+             <name>subsea_plant_4_-87.69_-85.53</name>
+             <pose>-87.69 -85.53 -40 0 0 5.4</pose>
+         </include>
+         <include>
+             <uri>model://subsea_plant_2</uri>
+             <name>subsea_plant_2_32.81_8.83</name>
+             <pose>32.81 8.83 -40 0 0 5.14</pose>
+         </include>
+         <include>
+             <uri>model://subsea_plant_4</uri>
+             <name>subsea_plant_4_32.5_7.76</name>
+             <pose>32.5 7.76 -40 0 0 2.77</pose>
+         </include>
+         <include>
+             <uri>model://subsea_plant_4</uri>
+             <name>subsea_plant_4_32.78_8.73</name>
+             <pose>32.78 8.73 -40 0 0 4.98</pose>
+         </include>
+         <include>
+             <uri>model://subsea_plant_4</uri>
+             <name>subsea_plant_4_32.2_9.61</name>
+             <pose>32.2 9.61 -40 0 0 5.47</pose>
+         </include>
+         <include>
+             <uri>model://subsea_plant_4</uri>
+             <name>subsea_plant_4_-46.47_60.72</name>
+             <pose>-46.47 60.72 -40 0 0 1.44</pose>
+         </include>
+         <include>
+             <uri>model://subsea_plant_2</uri>
+             <name>subsea_plant_2_-47.19_58.77</name>
+             <pose>-47.19 58.77 -40 0 0 4.16</pose>
+         </include>
+         <include>
+             <uri>model://subsea_plant_2</uri>
+             <name>subsea_plant_2_-45.88_58.42</name>
+             <pose>-45.88 58.42 -40 0 0 0.45</pose>
+         </include>
+         <include>
+             <uri>model://subsea_plant_1</uri>
+             <name>subsea_plant_1_-20.98_-7.61</name>
+             <pose>-20.98 -7.61 -40 0 0 1.95</pose>
+         </include>
+         <include>
+             <uri>model://subsea_plant_2</uri>
+             <name>subsea_plant_2_-21.50_-6.98</name>
+             <pose>-21.50 -6.98 -40 0 0 2.3</pose>
+         </include>
+         <include>
+             <uri>model://subsea_plant_3</uri>
+             <name>subsea_plant_3_-19.40_-7.80</name>
+             <pose>-19.40 -7.80 -40 0 0 3.47</pose>
+         </include>
+         <include>
+             <uri>model://subsea_plant_3</uri>
+             <name>subsea_plant_3_-68.34_-31.1</name>
+             <pose>-68.34 -31.1 -40 0 0 5.41</pose>
+         </include>
+         <include>
+             <uri>model://subsea_plant_4</uri>
+             <name>subsea_plant_4_-68.12_-31.15</name>
+             <pose>-68.12 -31.15 -40 0 0 3.12</pose>
+         </include>
+         <include>
+             <uri>model://subsea_plant_4</uri>
+             <name>subsea_plant_4_-23.70_44.97</name>
+             <pose>-23.70 44.97 -40 0 0 0.87</pose>
+         </include>
+         <include>
+             <uri>model://subsea_plant_3</uri>
+             <name>subsea_plant_3_-23.23_44.57</name>
+             <pose>-23.23 44.57 -40 0 0 5.86</pose>
+         </include>
+         <include>
+             <uri>model://subsea_plant_4</uri>
+             <name>subsea_plant_4_-22.36_44.79</name>
+             <pose>-22.36 44.79 -40 0 0 1.65</pose>
+         </include>
+         <include>
+             <uri>model://subsea_plant_2</uri>
+             <name>subsea_plant_2_-22.81_44.38</name>
+             <pose>-22.81 44.38 -40 0 0 4.9</pose>
+         </include>
+         <include>
+             <uri>model://subsea_plant_1</uri>
+             <name>subsea_plant_1_93.46_74.37</name>
+             <pose>93.46 74.37 -40 0 0 0.98</pose>
+         </include>
+         <include>
+             <uri>model://subsea_plant_3</uri>
+             <name>subsea_plant_3_93.69_75.42</name>
+             <pose>93.69 75.42 -40 0 0 5.16</pose>
+         </include>
+         <include>
+             <uri>model://subsea_plant_4</uri>
+             <name>subsea_plant_4_93.60_73.38</name>
+             <pose>93.60 73.38 -40 0 0 1.46</pose>
+         </include>
+         <include>
+             <uri>model://subsea_plant_3</uri>
+             <name>subsea_plant_3_94.27_74.15</name>
+             <pose>94.27 74.15 -40 0 0 4.93</pose>
+         </include>
+         <include>
+             <uri>model://subsea_plant_1</uri>
+             <name>subsea_plant_1_43.40_-57.15</name>
+             <pose>43.40 -57.15 -40 0 0 4.95</pose>
+         </include>
+         <include>
+             <uri>model://subsea_plant_3</uri>
+             <name>subsea_plant_3_43.0_-56.62</name>
+             <pose>43.0 -56.62 -40 0 0 4.27</pose>
+         </include>
+         <include>
+             <uri>model://subsea_plant_1</uri>
+             <name>subsea_plant_1_-46.98_-35.72</name>
+             <pose>-46.98 -35.72 -40 0 0 0.99</pose>
+         </include>
+         <include>
+             <uri>model://subsea_plant_4</uri>
+             <name>subsea_plant_4_-48.85_-35.35</name>
+             <pose>-48.85 -35.35 -40 0 0 0.83</pose>
+         </include>
+         <include>
+             <uri>model://subsea_plant_4</uri>
+             <name>subsea_plant_4_-46.23_-37.61</name>
+             <pose>-46.23 -37.61 -40 0 0 2.26</pose>
+         </include>
+         <include>
+             <uri>model://subsea_plant_4</uri>
+             <name>subsea_plant_4_-48.51_-35.6</name>
+             <pose>-48.51 -35.6 -40 0 0 0.50</pose>
+         </include>
+         <include>
+             <uri>model://subsea_plant_2</uri>
+             <name>subsea_plant_2_82.41_52.47</name>
+             <pose>82.41 52.47 -40 0 0 1.56</pose>
+         </include>
+         <include>
+             <uri>model://subsea_plant_3</uri>
+             <name>subsea_plant_3_81.65_51.42</name>
+             <pose>81.65 51.42 -40 0 0 1.51</pose>
+         </include>
+         <include>
+             <uri>model://subsea_plant_2</uri>
+             <name>subsea_plant_2_82.56_51.96</name>
+             <pose>82.56 51.96 -40 0 0 5.14</pose>
+         </include>
+         <include>
+             <uri>model://subsea_plant_3</uri>
+             <name>subsea_plant_3_81.62_52.29</name>
+             <pose>81.62 52.29 -40 0 0 0.85</pose>
+         </include>
+
+        <!-- set of rocks -->
+         <include>
+             <uri>model://subsea_rock_2</uri>
+             <name>subsea_rock_2_-37.10_93.30</name>
+             <pose>-37.10 93.30 -40 2.86 4.5 0.73</pose>
+         </include>
+         <include>
+             <uri>model://subsea_rock_1</uri>
+             <name>subsea_rock_1_-30.92_56.29</name>
+             <pose>-30.92 56.29 -40 1.66 2.84 5.49</pose>
+         </include>
+         <include>
+             <uri>model://subsea_rock_1</uri>
+             <name>subsea_rock_1_12.16_-20.54</name>
+             <pose>12.16 -20.54 -40 4.26 0.17 4.18</pose>
+         </include>
+         <include>
+             <uri>model://subsea_rock_1</uri>
+             <name>subsea_rock_1_23.43_0.44</name>
+             <pose>23.43 0.44 -40 4.63 4.13 5.56</pose>
+         </include>
+         <include>
+             <uri>model://subsea_rock_1</uri>
+             <name>subsea_rock_1_-49.78_37.78</name>
+             <pose>-49.78 37.78 -40 1.60 2.22 2.3</pose>
+         </include>
+         <include>
+             <uri>model://subsea_rock_1</uri>
+             <name>subsea_rock_1_97.51_-81.82</name>
+             <pose>97.51 -81.82 -40 1.23 1.8 2.73</pose>
+         </include>
+         <include>
+             <uri>model://subsea_rock_1</uri>
+             <name>subsea_rock_1_-75.26_94.38</name>
+             <pose>-75.26 94.38 -40 1.24 0.60 0.36</pose>
+         </include>
+         <include>
+             <uri>model://subsea_rock_2</uri>
+             <name>subsea_rock_2_-6.63_19.46</name>
+             <pose>-6.63 19.46 -40 2.11 1.22 0.75</pose>
+         </include>
+         <include>
+             <uri>model://subsea_rock_3</uri>
+             <name>subsea_rock_3_-56.62_-74.7</name>
+             <pose>-56.62 -74.7 -40 0.2 1.32 1.19</pose>
+         </include>
+         <include>
+             <uri>model://subsea_rock_1</uri>
+             <name>subsea_rock_1_51.12_46.27</name>
+             <pose>51.12 46.27 -40 3.21 3.93 3.41</pose>
+         </include>
+         <include>
+             <uri>model://subsea_rock_2</uri>
+             <name>subsea_rock_2_55.54_98.55</name>
+             <pose>55.54 98.55 -40 2.20 5.84 1.49</pose>
+         </include>
+         <include>
+             <uri>model://subsea_rock_1</uri>
+             <name>subsea_rock_1_-79.32_-23.96</name>
+             <pose>-79.32 -23.96 -40 0.50 1.22 3.86</pose>
+         </include>
+         <include>
+             <uri>model://subsea_rock_1</uri>
+             <name>subsea_rock_1_-49.51_-97.24</name>
+             <pose>-49.51 -97.24 -40 0.61 5.88 3.49</pose>
+         </include>
+         <include>
+             <uri>model://subsea_rock_1</uri>
+             <name>subsea_rock_1_-72.63_36.81</name>
+             <pose>-72.63 36.81 -40 2.86 5.13 2.94</pose>
+         </include>
+         <include>
+             <uri>model://subsea_rock_1</uri>
+             <name>subsea_rock_1_73.90_98.94</name>
+             <pose>73.90 98.94 -40 5.54 4.86 3.89</pose>
+         </include>
+
+        <!-- set of reefs -->
+         <include>
+             <uri>model://reef</uri>
+             <name>reef_-76.44_-59.2</name>
+             <pose>-76.44 -59.2 -40 0 0 2.99</pose>
+         </include>
+         <include>
+             <uri>model://reef</uri>
+             <name>reef_-76.84_-59.36</name>
+             <pose>-76.84 -59.36 -40 0 0 4.72</pose>
+         </include>
+         <include>
+             <uri>model://reef</uri>
+             <name>reef_-51.94_70.61</name>
+             <pose>-51.94 70.61 -40 0 0 2.67</pose>
+         </include>
+         <include>
+             <uri>model://reef</uri>
+             <name>reef_-51.95_70.54</name>
+             <pose>-51.95 70.54 -40 0 0 1.79</pose>
+         </include>
+         <include>
+             <uri>model://reef</uri>
+             <name>reef_68.45_93.75</name>
+             <pose>68.45 93.75 -40 0 0 3.34</pose>
+         </include>
+         <include>
+             <uri>model://reef</uri>
+             <name>reef_68.42_93.73</name>
+             <pose>68.42 93.73 -40 0 0 5.96</pose>
+         </include>
+         <include>
+             <uri>model://reef</uri>
+             <name>reef_68.73_93.7</name>
+             <pose>68.73 93.7 -40 0 0 5.75</pose>
+         </include>
+         <include>
+             <uri>model://reef</uri>
+             <name>reef_-98.36_-90.58</name>
+             <pose>-98.36 -90.58 -40 0 0 5.94</pose>
+         </include>
+         <include>
+             <uri>model://reef</uri>
+             <name>reef_-98.52_-90.62</name>
+             <pose>-98.52 -90.62 -40 0 0 2.29</pose>
+         </include>
+         <include>
+             <uri>model://reef</uri>
+             <name>reef_28.1_36.30</name>
+             <pose>28.1 36.30 -40 0 0 5.2</pose>
+         </include>
+
+    </world>
+</sdf>

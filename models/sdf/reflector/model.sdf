@@ -1,0 +1,125 @@
+<sdf version="1.4">
+    <model name='reflector'>
+        <static>true</static>
+        <pose>0 0 0 0 0 0</pose>
+	<link name='reflector'>
+		<visual name='block1'>
+			<pose>0 1.7 -2 0 0 0.785398</pose>
+			<geometry>
+				<box>
+	                                <size>0.35 0.35 0.003</size>
+				</box>
+			</geometry>
+			<material>
+				<ambient>1 1 1 1</ambient>
+				<diffuse>1 1 1 1</diffuse>
+				<specular>1 1 1 1</specular>
+			</material>
+		</visual>
+		<visual name='block2'>
+			<pose>0 1.7 -2 1.5708 0.785398 0</pose>
+			<geometry>
+				<box>
+	                                <size>0.35 0.35 0.003</size>
+				</box>
+			</geometry>
+			<material>
+				<ambient>1 1 1 1</ambient>
+				<diffuse>1 1 1 1</diffuse>
+				<specular>1 1 1 1</specular>
+			</material>
+		</visual>
+		<visual name='block3'>
+			<pose>0 1.7 -2 1.5708 0.785398 1.5708</pose>
+			<geometry>
+				<box>
+	                                <size>0.35 0.35 0.003</size>
+				</box>
+			</geometry>
+			<material>
+				<ambient>1 1 1 1</ambient>
+				<diffuse>1 1 1 1</diffuse>
+				<specular>1 1 1 1</specular>
+			</material>
+		</visual>
+		<visual name='block4'>
+			<pose>0 1.7 2 0 0 0.785398</pose>
+			<geometry>
+				<box>
+	                                <size>0.35 0.35 0.003</size>
+				</box>
+			</geometry>
+			<material>
+				<ambient>1 1 1 1</ambient>
+				<diffuse>1 1 1 1</diffuse>
+				<specular>1 1 1 1</specular>
+			</material>
+		</visual>
+		<visual name='block5'>
+			<pose>0 1.7 2 1.5708 0.785398 0</pose>
+			<geometry>
+				<box>
+	                                <size>0.35 0.35 0.003</size>
+				</box>
+			</geometry>
+			<material>
+				<ambient>1 1 1 1</ambient>
+				<diffuse>1 1 1 1</diffuse>
+				<specular>1 1 1 1</specular>
+			</material>
+		</visual>
+		<visual name='block6'>
+			<pose>0 1.7 2 1.5708 0.785398 1.5708</pose>
+			<geometry>
+				<box>
+	                                <size>0.35 0.35 0.003</size>
+				</box>
+			</geometry>
+			<material>
+				<ambient>1 1 1 1</ambient>
+				<diffuse>1 1 1 1</diffuse>
+				<specular>1 1 1 1</specular>
+			</material>
+		</visual>
+		<visual name='block7'>
+			<pose>0 -1.7 2 0 0 0.785398</pose>
+			<geometry>
+				<box>
+	                                <size>0.35 0.35 0.003</size>
+				</box>
+			</geometry>
+			<material>
+				<ambient>1 1 1 1</ambient>
+				<diffuse>1 1 1 1</diffuse>
+				<specular>1 1 1 1</specular>
+			</material>
+		</visual>
+		<visual name='block8'>
+			<pose>0 -1.7 2 1.5708 0.785398 0</pose>
+			<geometry>
+				<box>
+	                                <size>0.35 0.35 0.003</size>
+				</box>
+			</geometry>
+			<material>
+				<ambient>1 1 1 1</ambient>
+				<diffuse>1 1 1 1</diffuse>
+				<specular>1 1 1 1</specular>
+			</material>
+		</visual>
+		<visual name='block9'>
+			<pose>0 -1.7 2 1.5708 0.785398 1.5708</pose>
+			<geometry>
+				<box>
+	                                <size>0.35 0.35 0.003</size>
+				</box>
+			</geometry>
+			<material>
+				<ambient>1 1 1 1</ambient>
+				<diffuse>1 1 1 1</diffuse>
+				<specular>1 1 1 1</specular>
+			</material>
+		</visual>
+        </link>
+    </model>
+</sdf>

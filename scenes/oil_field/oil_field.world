@@ -1,0 +1,50 @@
+<?xml version="1.0" ?>
+<sdf version="1.4">
+    <world name="oil_field">
+        <physics type="ode">
+            <max_step_size>0.01</max_step_size>
+            <real_time_factor>1</real_time_factor>
+            <real_time_update_rate>100</real_time_update_rate>
+        </physics>
+
+        <model name="nwu">
+            <static>true</static>
+            <link name="base" />
+            <link name="orientation" />
+            <joint name="__joint_orientation" type="fixed">
+                <child>orientation</child>
+                <parent>base</parent>
+            </joint>
+        </model>
+
+        <model name="surface">
+            <static>true</static>
+        </model>
+
+        <model name="usbl">
+            <static>true</static>
+        </model>
+
+        <include>
+            <uri>model://sun</uri>
+        </include>
+
+        <include>
+            <uri>model://flat_fish</uri>
+            <pose>0 -20 0 0 0 0</pose>
+        </include>
+
+        <include>
+            <uri>model://oil_rig_manifold</uri>
+        </include>
+
+        <plugin name="underwater" filename="libgazebo_underwater.so">
+            <model_name>flat_fish</model_name>
+            <link_name>flat_fish_body</link_name>
+            <drag_coefficient>5 7.5 12.5</drag_coefficient>
+            <center_of_buoyancy>0 0 0.1</center_of_buoyancy>
+            <buoyancy>18</buoyancy>
+        </plugin>
+
+    </world>
+</sdf>
